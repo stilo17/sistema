@@ -31,9 +31,9 @@ function sendEmail($ente, $mensagem,$user){
     ini_set("sendmail_from", "comercial@brprev.com");
 
 	$quebra_linha = "\n";
-	$emailsender = "comercial@brprev.com";
+	$emailsender = "";
 	$nomeRemetente = "Sistema Comercial";
-	$emailDestino = "comercial@brprev.com";
+	$emailDestino = "";
 	$assunto = $user."-Proposta Comercial-".$ente;
 	$mensagemHTML = $mensagem;
 
@@ -199,8 +199,8 @@ function pegarNotificacoes(){
 
         $notificacoes = array();
         $host = "pop.brprev.com"; //aqui você deve informar o seu servidor de Email, pode ser imap.domínio ou pop.domínio 
-        $usuario = "comercial@brprev.com";
-        $senha = "@brprev2016@";
+        $usuario = "";
+        $senha = "";
         $pasta = "{".$host.":143/novalidate-cert}INBOX";
          
         $inbox = imap_open($pasta, $usuario, $senha);
