@@ -9,7 +9,7 @@ class Sql extends PDO{
 		if($_SERVER['REMOTE_ADDR'] == '::1'){
 			$this->dbconn = new PDO("mysql:dbname=db_comercial;host=localhost","root","",array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 		}else{
-			$this->dbconn = new PDO("mysql:dbname=brprev;host=186.202.152.239","brprev","brprevmp1983",array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
+			$this->dbconn = new PDO("mysql:dbname=;host=","","",array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 		}
 	}
 
